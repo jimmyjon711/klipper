@@ -69,7 +69,7 @@ command_config_endstop(uint32_t *args)
     struct endstop *e = oid_alloc(args[0], command_config_endstop, sizeof(*e));
     e->pin = gpio_in_setup(args[1], args[2]);
 }
-DECL_COMMAND(command_config_endstop, "config_endstop oid=%c pin=%c pull_up=%c");
+DECL_COMMAND(command_config_endstop, "config_endstop oid=%c pin=%c pull_up=%c is_pulse_gpio=%c");
 
 // Home an axis
 void

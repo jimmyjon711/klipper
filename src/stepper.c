@@ -220,7 +220,7 @@ command_config_stepper(uint32_t *args)
     }
 }
 DECL_COMMAND(command_config_stepper, "config_stepper oid=%c step_pin=%c"
-             " dir_pin=%c invert_step=%c step_pulse_ticks=%u");
+             " dir_pin=%c invert_step=%c step_pulse_ticks=%u type=%u index=%u");
 
 // Return the 'struct stepper' for a given stepper oid
 static struct stepper *
@@ -262,7 +262,7 @@ command_queue_step(uint32_t *args)
     irq_enable();
 }
 DECL_COMMAND(command_queue_step,
-             "queue_step oid=%c interval=%u count=%hu add=%hi");
+             "queue_step oid=%c interval=%u count=%hu add=%hi line=%u");
 
 // Set the direction of the next queued step
 void
